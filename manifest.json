@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "TXDES",
+    "description": "Esta extensión cambia las palabras haciendo uso del lenguaje inclusivo...están avisades...",
+    "version": "1.0",
+    "icons": {  "16": "todes_16.png",
+                "32": "todes_32.png",
+                "48": "todes_48.png",
+                "128": "todes_128.png" },
+    "browser_action": {
+        "default_icon": {   "16": "todes_16.png",
+                            "32": "todes_32.png",
+                            "48": "todes_48.png",
+                            "128": "todes_128.png" },
+        "default_popup":"popup.html"
+    },
+    "permissions":["storage"],
+    "content_scripts": [
+        {"matches": ["http://*/*"], "js": ["todes.js"] },
+        {"matches": ["https://*/*"], "js": ["todes.js"] }
+    ]
+}                
